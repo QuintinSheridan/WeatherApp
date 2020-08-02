@@ -20,7 +20,10 @@ locationForm.addEventListener('submit', (e) => {
 
                 console.log(data)
                 message1.textContent = data['address'] + ' ' + data['forecast']['location']
-                message2.textContent = `Current Temperature: ${data['forecast']['temperature']} C / ${data['forecast']['temperature']*1.8 +32} F Current Precipitation: ${data['forecast']['precipitation']}`
+                message2.textContent = `Local Time: ${data['forecast']['local_time']} \r\n`
+                message2.textContent += `Current Temperature: ${data['forecast']['temperature']} C / ${data['forecast']['temperature']*1.8 +32} F \r\n` 
+                message2.textContent += `Current Humidity: ${data['forecast']['temperature']} \r\n`
+                message2.textContent += `Current Precipitation: ${data['forecast']['precipitation']}`
             }
         })
     })

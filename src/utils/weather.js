@@ -16,7 +16,11 @@ const getWeather = (lat, lon, callback) => {
                 data = {
                     'location': body.location.region + ', ' + body.location.country,
                     'temperature': body.current.temperature,
-                    'precipitation': body.current.precip
+                    'humidity': body.current.humidity, 
+                    'precipitation': body.current.precip,
+                    'local_time': body.location.localtime,
+
+
                 }
 
                 console.log('Weather Response', body)
