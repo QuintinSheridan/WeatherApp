@@ -1,20 +1,3 @@
-fetch('http://puzzle.mead.io/puzzle').then((response)=> {
-    response.json().then((data) => {
-        console.log(data)
-    })
-})
-
-
-fetch('http://localhost:3000/weather?address=Denver').then((response) => {
-    response.json().then((data) => {
-        if(data.error) {
-            console.log(error)
-        } else{
-            console.log(data)
-        }
-    })
-})
-
 const locationForm = document.getElementById('location-form')
 const location_input = document.querySelector('input')
 const message1 = document.getElementById('message1')
@@ -27,7 +10,7 @@ locationForm.addEventListener('submit', (e) => {
     message1.textContent ="Loading..."
     message2.content = ''
 
-    fetch(`http://localhost:3000/weather?address=${location_input.value}`).then((response) => {
+    fetch(`/weather?address=${location_input.value}`).then((response) => {
         response.json().then((data) => {
             if(data.error) {
                 console.log(data.error)
