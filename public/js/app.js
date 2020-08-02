@@ -1,7 +1,3 @@
-console.log('ooooooooeeeee')
-alert('bitch')
-
-
 fetch('http://puzzle.mead.io/puzzle').then((response)=> {
     response.json().then((data) => {
         console.log(data)
@@ -18,13 +14,6 @@ fetch('http://localhost:3000/weather?address=Denver').then((response) => {
         }
     })
 })
-
-
-// const locationForm = document.getElementById('location-form')
-// const location_input = document.querySelector('input')
-// const temDisplay = document.getElementById("temp-display")
-// const precDisplay = document.getElementById("prec-display")
-// const errorDisplay = document.getElementById('error-message')
 
 const locationForm = document.getElementById('location-form')
 const location_input = document.querySelector('input')
